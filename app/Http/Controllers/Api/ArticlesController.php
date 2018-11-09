@@ -55,6 +55,17 @@ class ArticlesController extends Controller
     }
 
     /**
+     * Display the listing of popular articles.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function popular()
+    {
+        return Article::orderBy('views', 'desc')->get();
+    }
+
+    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
