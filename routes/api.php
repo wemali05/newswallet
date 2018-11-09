@@ -17,8 +17,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::post('register', 'Api\UsersController@register');
+Route::post('login', 'Api\UsersController@authenticate');
+
 Route::group([
-    'prefix' => 'v0'
+    'prefix' => 'v0',
+    'middleware' => ['jwt.verify']
 ], function() {
     // Categories Routes
     Route::get('categories', 'Api\CategoriesController@index');
