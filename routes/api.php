@@ -29,9 +29,9 @@ Route::group([
 
 
     // Articles Routes
-    Route::get('articles', 'Api\ArticleController@index');
-    Route::get('articles/{article}', 'Api\ArticleController@show');
-    Route::post('articles', 'Api\ArticleController@store');
-    Route::put('articles/{article}', 'Api\ArticleController@update');
-    Route::delete('articles/{article}', 'Api\ArticleController@delete');
+    Route::get('articles', 'Api\ArticlesController@index');
+    Route::get('articles/{article}', 'Api\ArticlesController@show');
+    Route::post('articles', 'Api\ArticlesController@store');
+    Route::put('articles/{article}', 'Api\ArticlesController@update');
+    Route::delete('articles/{article}', 'Api\ArticlesController@destroy');
 });
