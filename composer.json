@@ -10,6 +10,7 @@
         "fzaninotto/faker": "^1.8",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
+        "mpociot/laravel-apidoc-generator": "^3.0",
         "tymon/jwt-auth": "dev-develop"
     },
     "require-dev": {
