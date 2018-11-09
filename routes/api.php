@@ -20,6 +20,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group([
     'prefix' => 'v0'
 ], function() {
+    // Categories Routes
+    Route::get('categories', 'Api\CategoriesController@index');
+    Route::get('categories/{category}', 'Api\CategoriesController@show');
+    Route::post('categories', 'Api\CategoriesController@store');
+    Route::put('categories/{category}', 'Api\CategoriesController@update');
+    Route::delete('categories/{category}', 'Api\CategoriesController@destroy');
+
+
+    // Articles Routes
     Route::get('articles', 'Api\ArticleController@index');
     Route::get('articles/{article}', 'Api\ArticleController@show');
     Route::post('articles', 'Api\ArticleController@store');
