@@ -15,4 +15,13 @@ class Category extends Model
         'title', 
         'description',
     ];
+
+    /**
+     * Relation to articles
+     * A category has many articles
+     * 
+     */
+    public function article(){
+        return $this->hasMany('App\Models\Article');
+    }
 }

@@ -21,4 +21,13 @@ class Article extends Model
         'link',
         'description'
     ];
+
+    /**
+     * Relation to category
+     * An article belongs to  category
+     * 
+     */
+    public function category(){
+        return $this->belongsTo('App\Models\Category');
+    }
 }
