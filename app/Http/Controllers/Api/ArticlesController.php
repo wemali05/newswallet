@@ -62,7 +62,7 @@ class ArticlesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Article $articled)
+    public function destroy(Article $article)
     {
         $article->delete();
 
