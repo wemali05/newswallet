@@ -21,7 +21,7 @@ class Category extends Model
      * A category has many articles
      * 
      */
-    public function article(){
+    public function articles(){
         return $this->hasMany('App\Models\Article');
     }
 }

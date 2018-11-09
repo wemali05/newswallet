@@ -27,7 +27,7 @@ class Article extends Model
      * An article belongs to  category
      * 
      */
-    public function category(){
+    public function categories(){
         return $this->belongsTo('App\Models\Category');
     }
 }

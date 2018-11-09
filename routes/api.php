@@ -27,6 +27,7 @@ Route::group([
     // Categories Routes
     Route::get('categories', 'Api\CategoriesController@index');
     Route::get('categories/{category}', 'Api\CategoriesController@show');
+    Route::get('categories/report/popular', 'Api\CategoriesController@popular');
     Route::post('categories', 'Api\CategoriesController@store');
     Route::put('categories/{category}', 'Api\CategoriesController@update');
     Route::delete('categories/{category}', 'Api\CategoriesController@destroy');

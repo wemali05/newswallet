@@ -43,6 +43,18 @@ class CategoriesController extends Controller
     }
 
     /**
+     * Display the listing of popular categories.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function popular()
+    {
+        $categories = Category::withCount(['articles'])->orderBy('articles_count', 'desc')->get();
+        return $categories;
+    }
+
+    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
