@@ -19,6 +19,15 @@ class ArticlesController extends Controller
     }
 
     /**
+     * Display listing of resources in pagination.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function articlesPaginated(){
+        return Article::paginate(10);
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
