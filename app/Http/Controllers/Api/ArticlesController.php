@@ -48,6 +48,9 @@ class ArticlesController extends Controller
      */
     public function show(Article $article)
     {
+        // Increase the number of views
+        $article->increment('views');
+
         return $article;
     }
 
