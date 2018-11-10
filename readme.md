@@ -25,11 +25,16 @@ Run the following command to generate your app key:
 php artisan key:generate
 ```
 
+Update database credentials on the ```.env``` and run the command:
+```
+php artisan migrate --seed
+```
 Then start your server:
 
 ```
 php artisan serve
 ```
+
 
 Your Laravel starter project is now up and running! 
 
