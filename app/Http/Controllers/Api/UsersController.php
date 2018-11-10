@@ -12,6 +12,11 @@ use Tymon\JWTAuth\Exceptions\JWTException;
 
 class UsersController extends Controller
 {
+    public function __construct(){
+        if ((\App::environment() == 'testing') && array_key_exists("HTTP_AUTHORIZATION",  \Request::server())) {
+            JWTAuth::setRequest(\Route::getCurrentRequest());
+        }
+    }
     /**
      * Log in user and generate authorization token. If user is not found in database
      * throw an error or exception occured while finding user.
