@@ -74,9 +74,9 @@ class CategoriesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $Categoryd)
+    public function destroy(Category $category)
     {
-        $Category->delete();
+        $category->delete();
 
         return response()->json(null, 204);
     }
