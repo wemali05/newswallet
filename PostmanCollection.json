@@ -46,7 +46,11 @@
                     "password" : "123456"
 				},
 				"description": "Log in user and generate authorization token. If user is not found in database\nthrow an error or exception occured while finding user.",
-				"response": []
+				"response": [
+                    {
+                        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MTg3NzA2NCwiZXhwIjoxNTQxODgwNjY0LCJuYmYiOjE1NDE4NzcwNjQsImp0aSI6Ilc5SU5paUMyRUV6dWJQNWMiLCJzdWIiOjExLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.YhycSrEgB72ekIIsrp7blzJbygftMxUIFeNwmrleaPk"
+                    }
+                ]
 			}
 		}, {
 			"name": "Display all available categories.",
