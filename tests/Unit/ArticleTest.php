@@ -74,4 +74,34 @@ class ArticleTest extends TestCase
             ]
         );
     }
+
+    /**
+     * Test update articles
+     */
+    public function testUpdateProduct()
+    {
+        $response = $this->json('GET', '/api/v0/articles');
+        $response->assertStatus(200);
+
+        $product = $response->getData()[0];
+
+        $user = factory(\App\Models\User::class)->create();
+        $update = $this->actingAs($user, 'api')->json('PUT', '/api/V0/articles/'.$product->id,['title' => "Changed for test"]);
+        $update->assertStatus(200);
+    } 
+
+    /**
+     * Test deleting an article
+     */
+    public function testDeleteProduct()
+    {
+        $response = $this->json('GET', '/api/v0/articles');
+        $response->assertStatus(200);
+
+        $product = $response->getData()[0];
+
+        $user = factory(\App\User::class)->create();
+        $delete = $this->actingAs($user, 'api')->json('DELETE', '/api/v0/articles/'.$product->id);
+        $delete->assertStatus(204);
+    }
 }
