@@ -9,7 +9,7 @@ I read a lot of news articles and many are the times I find very good articles t
 
 ### Launch the starter project
 
-*(Assuming you've [installed Laravel](https://laravel.com/docs/5.5/installation))*
+*(Assuming you've [installed Laravel](https://laravel.com/docs/5.7/installation))*
 
 Fork this repository, then clone your fork, and run this in your newly created directory:
 
