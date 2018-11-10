@@ -1,0 +1,703 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <link rel="stylesheet" href="docs/css/style.css" />
+    <script src="docs/js/all.js"></script>
+
+
+          <script>
+        $(function() {
+            setupLanguages(["bash","javascript"]);
+        });
+      </script>
+      </head>
+
+  <body class="">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="docs/images/navbar.png" />
+      </span>
+    </a>
+    <div class="tocify-wrapper">
+        <img src="docs/images/logo.png" />
+                    <div class="lang-selector">
+                                  <a href="#" data-language-name="bash">bash</a>
+                                  <a href="#" data-language-name="javascript">javascript</a>
+                            </div>
+                            <div class="search">
+              <input type="text" class="search" id="input-search" placeholder="Search">
+            </div>
+            <ul class="search-results"></ul>
+              <div id="toc">
+      </div>
+                    <ul class="toc-footer">
+                                  <li><a href='http://github.com/mpociot/documentarian'>Documentation Powered by Documentarian</a></li>
+                            </ul>
+            </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+          <!-- START_INFO -->
+<h1>Info</h1>
+<p>Welcome to the generated API reference.
+<a href="http://localhost/docs/collection.json">Get Postman Collection</a></p>
+<!-- END_INFO -->
+<h1>general</h1>
+<!-- START_d7b7952e7fdddc07c978c9bdaf757acf -->
+<h2>Validates user input on validation of user credentials.</h2>
+<p>Passes user to JWTAuth to generate user token.</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/api/register" \
+    -H "Authorization: Bearer: {token}"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/register",
+    "method": "POST",
+    "headers": {
+        "Authorization": "Bearer: {token}",
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/register</code></p>
+<!-- END_d7b7952e7fdddc07c978c9bdaf757acf -->
+<!-- START_c3fa189a6c95ca36ad6ac4791a873d23 -->
+<h2>Log in user and generate authorization token. If user is not found in database</h2>
+<p>throw an error or exception occured while finding user.</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/api/login" \
+    -H "Authorization: Bearer: {token}"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/login",
+    "method": "POST",
+    "headers": {
+        "Authorization": "Bearer: {token}",
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/login</code></p>
+<!-- END_c3fa189a6c95ca36ad6ac4791a873d23 -->
+<!-- START_daef3d0d0befd7a4af1ab644095baf69 -->
+<h2>Display a listing of the resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v0/categories" \
+    -H "Authorization: Bearer: {token}"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v0/categories",
+    "method": "GET",
+    "headers": {
+        "Authorization": "Bearer: {token}",
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">{
+    "status": "Authorization Token not found"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v0/categories</code></p>
+<!-- END_daef3d0d0befd7a4af1ab644095baf69 -->
+<!-- START_6689c4ba3c33c8544985d335382aa6f2 -->
+<h2>Display the specified resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v0/categories/{category}" \
+    -H "Authorization: Bearer: {token}"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v0/categories/{category}",
+    "method": "GET",
+    "headers": {
+        "Authorization": "Bearer: {token}",
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">{
+    "status": "Authorization Token not found"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v0/categories/{category}</code></p>
+<!-- END_6689c4ba3c33c8544985d335382aa6f2 -->
+<!-- START_15785762c46671a5fbebec4abfdf7c20 -->
+<h2>Display the listing of popular categories.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v0/categories/reports/popular" \
+    -H "Authorization: Bearer: {token}"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v0/categories/reports/popular",
+    "method": "GET",
+    "headers": {
+        "Authorization": "Bearer: {token}",
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">{
+    "status": "Authorization Token not found"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v0/categories/reports/popular</code></p>
+<!-- END_15785762c46671a5fbebec4abfdf7c20 -->
+<!-- START_bd52fc5607d02e665082ac9534e06162 -->
+<h2>Store a newly created resource in storage.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/api/v0/categories" \
+    -H "Authorization: Bearer: {token}"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v0/categories",
+    "method": "POST",
+    "headers": {
+        "Authorization": "Bearer: {token}",
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/v0/categories</code></p>
+<!-- END_bd52fc5607d02e665082ac9534e06162 -->
+<!-- START_78178edbe6c84346813d216ed0e6e7c2 -->
+<h2>Update the specified resource in storage.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT "http://localhost/api/v0/categories/{category}" \
+    -H "Authorization: Bearer: {token}"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v0/categories/{category}",
+    "method": "PUT",
+    "headers": {
+        "Authorization": "Bearer: {token}",
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT api/v0/categories/{category}</code></p>
+<!-- END_78178edbe6c84346813d216ed0e6e7c2 -->
+<!-- START_3a9e8e7f00e0b321f7033e58a4d3f964 -->
+<h2>Remove the specified resource from storage.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE "http://localhost/api/v0/categories/{category}" \
+    -H "Authorization: Bearer: {token}"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v0/categories/{category}",
+    "method": "DELETE",
+    "headers": {
+        "Authorization": "Bearer: {token}",
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<h3>HTTP Request</h3>
+<p><code>DELETE api/v0/categories/{category}</code></p>
+<!-- END_3a9e8e7f00e0b321f7033e58a4d3f964 -->
+<!-- START_9f15357b019453a694300987cdf3691c -->
+<h2>Display a listing of the resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v0/articles" \
+    -H "Authorization: Bearer: {token}"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v0/articles",
+    "method": "GET",
+    "headers": {
+        "Authorization": "Bearer: {token}",
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">{
+    "status": "Authorization Token not found"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v0/articles</code></p>
+<!-- END_9f15357b019453a694300987cdf3691c -->
+<!-- START_7fec42cfd8b116f6dbdd53414c8170f9 -->
+<h2>Display listing of resources in pagination.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v0/articles/page" \
+    -H "Authorization: Bearer: {token}"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v0/articles/page",
+    "method": "GET",
+    "headers": {
+        "Authorization": "Bearer: {token}",
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">{
+    "status": "Authorization Token not found"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v0/articles/page</code></p>
+<!-- END_7fec42cfd8b116f6dbdd53414c8170f9 -->
+<!-- START_3f3dbeb2f04653ed3222fa4c71fc43b4 -->
+<h2>Display the listing of popular articles.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v0/articles/reports/popular" \
+    -H "Authorization: Bearer: {token}"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v0/articles/reports/popular",
+    "method": "GET",
+    "headers": {
+        "Authorization": "Bearer: {token}",
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">{
+    "status": "Authorization Token not found"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v0/articles/reports/popular</code></p>
+<!-- END_3f3dbeb2f04653ed3222fa4c71fc43b4 -->
+<!-- START_ff854b6730c417b83be90ec5a98cdbc9 -->
+<h2>Display the specified resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/api/v0/articles/{article}" \
+    -H "Authorization: Bearer: {token}"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v0/articles/{article}",
+    "method": "GET",
+    "headers": {
+        "Authorization": "Bearer: {token}",
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">{
+    "status": "Authorization Token not found"
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v0/articles/{article}</code></p>
+<!-- END_ff854b6730c417b83be90ec5a98cdbc9 -->
+<!-- START_e9712de5b30f5c850417c094bc98c6b1 -->
+<h2>Store a newly created resource in storage.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/api/v0/articles" \
+    -H "Authorization: Bearer: {token}"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v0/articles",
+    "method": "POST",
+    "headers": {
+        "Authorization": "Bearer: {token}",
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/v0/articles</code></p>
+<!-- END_e9712de5b30f5c850417c094bc98c6b1 -->
+<!-- START_fabca15d21fe7d0994f9c0ef4cff812c -->
+<h2>Update the specified resource in storage.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT "http://localhost/api/v0/articles/{article}" \
+    -H "Authorization: Bearer: {token}"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v0/articles/{article}",
+    "method": "PUT",
+    "headers": {
+        "Authorization": "Bearer: {token}",
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT api/v0/articles/{article}</code></p>
+<!-- END_fabca15d21fe7d0994f9c0ef4cff812c -->
+<!-- START_8f32084972053a0c92da0134c2f7748c -->
+<h2>Remove the specified resource from storage.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE "http://localhost/api/v0/articles/{article}" \
+    -H "Authorization: Bearer: {token}"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/v0/articles/{article}",
+    "method": "DELETE",
+    "headers": {
+        "Authorization": "Bearer: {token}",
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<h3>HTTP Request</h3>
+<p><code>DELETE api/v0/articles/{article}</code></p>
+<!-- END_8f32084972053a0c92da0134c2f7748c -->
+<!-- START_66e08d3cc8222573018fed49e121e96d -->
+<h2>Show the application&#039;s login form.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/login" \
+    -H "Authorization: Bearer: {token}"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/login",
+    "method": "GET",
+    "headers": {
+        "Authorization": "Bearer: {token}",
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">null</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET login</code></p>
+<!-- END_66e08d3cc8222573018fed49e121e96d -->
+<!-- START_ba35aa39474cb98cfb31829e70eb8b74 -->
+<h2>Handle a login request to the application.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/login" \
+    -H "Authorization: Bearer: {token}"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/login",
+    "method": "POST",
+    "headers": {
+        "Authorization": "Bearer: {token}",
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST login</code></p>
+<!-- END_ba35aa39474cb98cfb31829e70eb8b74 -->
+<!-- START_e65925f23b9bc6b93d9356895f29f80c -->
+<h2>Log the user out of the application.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/logout" \
+    -H "Authorization: Bearer: {token}"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/logout",
+    "method": "POST",
+    "headers": {
+        "Authorization": "Bearer: {token}",
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST logout</code></p>
+<!-- END_e65925f23b9bc6b93d9356895f29f80c -->
+<!-- START_ff38dfb1bd1bb7e1aa24b4e1792a9768 -->
+<h2>Show the application registration form.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/register" \
+    -H "Authorization: Bearer: {token}"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/register",
+    "method": "GET",
+    "headers": {
+        "Authorization": "Bearer: {token}",
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">null</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET register</code></p>
+<!-- END_ff38dfb1bd1bb7e1aa24b4e1792a9768 -->
+<!-- START_d7aad7b5ac127700500280d511a3db01 -->
+<h2>Handle a registration request for the application.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/register" \
+    -H "Authorization: Bearer: {token}"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/register",
+    "method": "POST",
+    "headers": {
+        "Authorization": "Bearer: {token}",
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST register</code></p>
+<!-- END_d7aad7b5ac127700500280d511a3db01 -->
+<!-- START_d72797bae6d0b1f3a341ebb1f8900441 -->
+<h2>Display the form to request a password reset link.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/password/reset" \
+    -H "Authorization: Bearer: {token}"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/password/reset",
+    "method": "GET",
+    "headers": {
+        "Authorization": "Bearer: {token}",
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">null</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET password/reset</code></p>
+<!-- END_d72797bae6d0b1f3a341ebb1f8900441 -->
+<!-- START_feb40f06a93c80d742181b6ffb6b734e -->
+<h2>Send a reset link to the given user.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/password/email" \
+    -H "Authorization: Bearer: {token}"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/password/email",
+    "method": "POST",
+    "headers": {
+        "Authorization": "Bearer: {token}",
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST password/email</code></p>
+<!-- END_feb40f06a93c80d742181b6ffb6b734e -->
+<!-- START_e1605a6e5ceee9d1aeb7729216635fd7 -->
+<h2>Display the password reset view for the given token.</h2>
+<p>If no token is present, display the link request form.</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/password/reset/{token}" \
+    -H "Authorization: Bearer: {token}"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/password/reset/{token}",
+    "method": "GET",
+    "headers": {
+        "Authorization": "Bearer: {token}",
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">null</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET password/reset/{token}</code></p>
+<!-- END_e1605a6e5ceee9d1aeb7729216635fd7 -->
+<!-- START_cafb407b7a846b31491f97719bb15aef -->
+<h2>Reset the given user&#039;s password.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://localhost/password/reset" \
+    -H "Authorization: Bearer: {token}"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/password/reset",
+    "method": "POST",
+    "headers": {
+        "Authorization": "Bearer: {token}",
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST password/reset</code></p>
+<!-- END_cafb407b7a846b31491f97719bb15aef -->
+<!-- START_cb859c8e84c35d7133b6a6c8eac253f8 -->
+<h2>Show the application dashboard.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET -G "http://localhost/home" \
+    -H "Authorization: Bearer: {token}"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/home",
+    "method": "GET",
+    "headers": {
+        "Authorization": "Bearer: {token}",
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Unauthenticated."
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET home</code></p>
+<!-- END_cb859c8e84c35d7133b6a6c8eac253f8 -->
+      </div>
+      <div class="dark-box">
+                        <div class="lang-selector">
+                                    <a href="#" data-language-name="bash">bash</a>
+                                    <a href="#" data-language-name="javascript">javascript</a>
+                              </div>
+                </div>
+    </div>
+  </body>
+</html>
