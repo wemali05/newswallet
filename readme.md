@@ -38,6 +38,14 @@ php artisan serve
 
 Your Laravel starter project is now up and running! 
 
+
+Check the ```PostmanCollection.json``` file to see the available APIs. 
+
+For more APIs, open your browser and type:
+```
+http://localhost:8000/docs
+```
+
 ## Deploying your Laravel application
 
 Once you've created your website, an easy way to deploy your Laravel application is to use [Heroku](http://www.heroku.com). Just follow these few simple steps once you have successfully [signed up](https://id.heroku.com/signup/www-header) and [installed the Heroku toolbelt](https://toolbelt.heroku.com/):
