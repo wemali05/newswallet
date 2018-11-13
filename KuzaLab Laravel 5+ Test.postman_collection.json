@@ -1,0 +1,358 @@
+{
+	"variables": [],
+	"info": {
+		"name": "KuzaLab Laravel 5+ Test",
+		"_postman_id": "a382383a-b932-c63e-b5a7-a20f8399754a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register new users",
+			"request": {
+				"url": "http://localhost:8000/api/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Brian Okinyi\",\n    \"email\" : \"brianokinyi.bo@gmail.com\",\n    \"password\" : \"123456\",\n    \"password_confirmation\" : \"123456\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Log in users",
+			"request": {
+				"url": "http://localhost:8000/api/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"brianokinyi.bo@gmail.com\",\n    \"password\" : \"123456\"\n}"
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "Display all available categories.",
+			"request": {
+				"url": "http://localhost:8000/api/v0/categories",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Display a list of all the categories"
+			},
+			"response": []
+		},
+		{
+			"name": "Display the specified category.",
+			"request": {
+				"url": "http://localhost:8000/api/v0/categories/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MjEyODEwMSwiZXhwIjoxNTQyMTMxNzAxLCJuYmYiOjE1NDIxMjgxMDEsImp0aSI6IldtUHFnTTVHQlF0ZndwdGsiLCJzdWIiOjEzLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.MEcDJTf7Diz_r0wUMvbwCLtgSam_im-eUQf1G9-hiyM",
+						"description": ""
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Display the listing of popular categories.",
+			"request": {
+				"url": "http://localhost:8000/api/v0/categories/reports/popular",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MjEyODEwMSwiZXhwIjoxNTQyMTMxNzAxLCJuYmYiOjE1NDIxMjgxMDEsImp0aSI6IldtUHFnTTVHQlF0ZndwdGsiLCJzdWIiOjEzLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.MEcDJTf7Diz_r0wUMvbwCLtgSam_im-eUQf1G9-hiyM",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Store a newly created category in storage.",
+			"request": {
+				"url": "http://localhost:8000/api/v0/categories",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MjEyODEwMSwiZXhwIjoxNTQyMTMxNzAxLCJuYmYiOjE1NDIxMjgxMDEsImp0aSI6IldtUHFnTTVHQlF0ZndwdGsiLCJzdWIiOjEzLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.MEcDJTf7Diz_r0wUMvbwCLtgSam_im-eUQf1G9-hiyM",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Category 1\",\n    \"description\": \"This is a description of the category\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update the specified category in storage.",
+			"request": {
+				"url": "http://localhost:8000/api/v0/categories/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MjEyODEwMSwiZXhwIjoxNTQyMTMxNzAxLCJuYmYiOjE1NDIxMjgxMDEsImp0aSI6IldtUHFnTTVHQlF0ZndwdGsiLCJzdWIiOjEzLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.MEcDJTf7Diz_r0wUMvbwCLtgSam_im-eUQf1G9-hiyM",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"Desciption has been updated.\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a specified category from storage.",
+			"request": {
+				"url": "http://localhost:8000/api/v0/categories/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MjEyODEwMSwiZXhwIjoxNTQyMTMxNzAxLCJuYmYiOjE1NDIxMjgxMDEsImp0aSI6IldtUHFnTTVHQlF0ZndwdGsiLCJzdWIiOjEzLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.MEcDJTf7Diz_r0wUMvbwCLtgSam_im-eUQf1G9-hiyM",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Display a listing of the articles.",
+			"request": {
+				"url": "http://localhost:8000/api/v0/articles",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MjEyODEwMSwiZXhwIjoxNTQyMTMxNzAxLCJuYmYiOjE1NDIxMjgxMDEsImp0aSI6IldtUHFnTTVHQlF0ZndwdGsiLCJzdWIiOjEzLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.MEcDJTf7Diz_r0wUMvbwCLtgSam_im-eUQf1G9-hiyM",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Display listing of resources in pagination.",
+			"request": {
+				"url": "http://localhost:8000/api/v0/articles/page",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MjEyODEwMSwiZXhwIjoxNTQyMTMxNzAxLCJuYmYiOjE1NDIxMjgxMDEsImp0aSI6IldtUHFnTTVHQlF0ZndwdGsiLCJzdWIiOjEzLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.MEcDJTf7Diz_r0wUMvbwCLtgSam_im-eUQf1G9-hiyM",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Display the listing of popular articles.",
+			"request": {
+				"url": "http://localhost:8000/api/v0/articles/reports/popular",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MjEyODEwMSwiZXhwIjoxNTQyMTMxNzAxLCJuYmYiOjE1NDIxMjgxMDEsImp0aSI6IldtUHFnTTVHQlF0ZndwdGsiLCJzdWIiOjEzLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.MEcDJTf7Diz_r0wUMvbwCLtgSam_im-eUQf1G9-hiyM",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Display the specified resource.",
+			"request": {
+				"url": "http://localhost:8000/api/v0/articles/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MjEyODEwMSwiZXhwIjoxNTQyMTMxNzAxLCJuYmYiOjE1NDIxMjgxMDEsImp0aSI6IldtUHFnTTVHQlF0ZndwdGsiLCJzdWIiOjEzLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.MEcDJTf7Diz_r0wUMvbwCLtgSam_im-eUQf1G9-hiyM",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Store a newly created resource in storage.",
+			"request": {
+				"url": "http://localhost:8000/api/v0/articles",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MjEyODEwMSwiZXhwIjoxNTQyMTMxNzAxLCJuYmYiOjE1NDIxMjgxMDEsImp0aSI6IldtUHFnTTVHQlF0ZndwdGsiLCJzdWIiOjEzLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.MEcDJTf7Diz_r0wUMvbwCLtgSam_im-eUQf1G9-hiyM",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n    \"category_id\": 5,\n    \"title\": \"Quam iste nobis fugiat voluptas aut quod quam.\",\n    \"image_path\": \"https://lorempixel.com/640/480/?58917\",\n    \"author_name\": \"Wilkinson\",\n    \"website_name\": \"Quam quis animi aut molestias asperiores.\",\n    \"link\": \"http://moore.info/in-ullam-eius-qui-nostrum\",\n    \"description\": \"Iusto aut veritatis autem est sint enim id eius. Maiores dolorem veritatis consequatur sed quas aut exercitationem. Cum error inventore officia ut sit eveniet quod. Expedita commodi expedita iusto non maiores est animi voluptatem.\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update the specified article in storage.",
+			"request": {
+				"url": "http://localhost:8000/api/v0/articles/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MjEyODEwMSwiZXhwIjoxNTQyMTMxNzAxLCJuYmYiOjE1NDIxMjgxMDEsImp0aSI6IldtUHFnTTVHQlF0ZndwdGsiLCJzdWIiOjEzLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.MEcDJTf7Diz_r0wUMvbwCLtgSam_im-eUQf1G9-hiyM",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"description\": \"Updated description\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete the specified article from storage.",
+			"request": {
+				"url": "http://localhost:8000/api/v0/articles/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MjEyODEwMSwiZXhwIjoxNTQyMTMxNzAxLCJuYmYiOjE1NDIxMjgxMDEsImp0aSI6IldtUHFnTTVHQlF0ZndwdGsiLCJzdWIiOjEzLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.MEcDJTf7Diz_r0wUMvbwCLtgSam_im-eUQf1G9-hiyM",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
